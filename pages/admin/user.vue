@@ -58,7 +58,7 @@ export default {
                 if (valid) {
                     this.loading = true
 
-                    try{
+                    try {
                         const formData = {
                             login: this.controls.login,
                             password: this.controls.password

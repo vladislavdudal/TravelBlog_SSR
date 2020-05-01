@@ -11,7 +11,8 @@ module.exports.login =  async (req, res) => {
         
         if (isPasswordCorrect) {
             const token = jwt.sign({
-                login: candidate.login, userID: candidate._id
+                login: candidate.login, 
+                userID: candidate._id
             }, keys.JWT, {expiresIn: 60 * 60})
             res.json({token}) //200
         } else {
@@ -25,7 +26,6 @@ module.exports.login =  async (req, res) => {
 
 module.exports.createUser = async (req, res) => {
     const candidate = await User.findOne({login: req.body.login})
-    
     if (candidate) {
         res.status(409).json({message: 'Такой логин уже занят'})
     } else {

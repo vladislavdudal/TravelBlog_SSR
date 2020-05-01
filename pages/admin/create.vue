@@ -10,7 +10,7 @@
 
         <el-form-item label="Введите название поста" prop="title">
             <el-input 
-                v-model.trim="controls.title"
+                v-model="controls.title"
             />
         </el-form-item>
 
@@ -105,7 +105,7 @@ export default {
                         this.$refs.upload.clearFiles()
                         this.$message.success('Пост создан')
                         this.loading = false
-                    } catch(e) {
+                    } catch(e) {} finally {
                         this.loading = false
                     }
                 } else {

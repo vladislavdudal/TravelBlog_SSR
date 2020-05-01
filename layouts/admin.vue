@@ -15,14 +15,14 @@
 import AppAside from '@/components/admin/Aside'
 export default {
     components: {AppAside},
-       computed: {
+    computed: {
         error() {
             return this.$store.getters.error
         }
     }, 
     watch: {
         error(value) {
-            this.$message.error(value.response.data.message)
+           this.$message.error(value.response.data.message)
         }
     }
 }

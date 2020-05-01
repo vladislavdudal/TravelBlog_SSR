@@ -13,7 +13,7 @@
         >
             <el-form-item label="Текст в формате .md или .html" prop="text">
                 <el-input 
-                    v-model.trim="controls.text"
+                    v-model="controls.text"
                     type="textarea"
                     resize="none"
                     :rows="10"
@@ -23,7 +23,7 @@
             <div class="mb">
                 <small class="mr">
                     <i class="el-icon-time"></i>
-                    <span>{{ new Date(post.date).toLocaleDateString()}}</span>
+                    <span>{{ new Date(post.date).toLocaleString()}}</span>
                 </small>
                 <small>
                     <i class="el-icon-view"></i>
@@ -75,6 +75,9 @@ export default {
             }
         }
     }, 
+    mounted(){
+        this.controls.text = this.post.text
+    },
     methods: {
         onSubmit() {
             this.$refs.form.validate(async valid => {
