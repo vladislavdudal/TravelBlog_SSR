@@ -13,7 +13,7 @@ module.exports = {
     ]
   },
 
-  loading: { color: '#fff' },
+  loading: { color: '#409EFF' },
 
   css: [
     'element-ui/lib/theme-chalk/index.css',
@@ -21,7 +21,8 @@ module.exports = {
   ],
 
   plugins: [
-    '@/plugins/globals'
+    '@/plugins/globals',
+    '@/plugins/axios'
   ],
 
   buildModules: [
@@ -33,6 +34,7 @@ module.exports = {
   ],
   
   axios: {
+    baseURL: process.env.BASE_URL || 'http://localhost:3000'
   },
 
   build: {
