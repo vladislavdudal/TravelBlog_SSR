@@ -27,8 +27,3 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 # Лабораторная работа 3:  
 Аутентификация реализована c помощью пакетов jsonwebtoken и bcrypt. Также используется Passport.js с помощью его защищаются роуты и проверяется валидность токена. Обработана 401 ошибка. 
 Все данные хранятся с ипользованием MongoDB. Работа с БД организована с помощью библиотеки Mongoose.    
-Деплой:    
-https://travel-blog-ssr.herokuapp.com - пользовательская часть      
-https://travel-blog-ssr.herokuapp.com/admin - панель администратора     
-Логин: admin    
-Пароль: 123456     
